@@ -16,6 +16,15 @@ namespace Session_04
 
         }
 
+        public int SelectNumber()
+        {
+            Console.WriteLine("Give an integer: ");
+            String stringNumber = Console.ReadLine();
+            int number = Convert.ToInt32(stringNumber);
+
+            return number;
+        }
+
         
 
 
@@ -23,7 +32,7 @@ namespace Session_04
         {
             
 
-          Console.WriteLine("0:Sum 1:Product");
+          Console.WriteLine("Type  0:Sum  1:Product");
           string stringNumber = Console.ReadLine();
           int number = Convert.ToInt32(stringNumber);
 
