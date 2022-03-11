@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_03
+namespace University
 {
-    internal class Grade
+    public class Grade
     {
 
         public Student Student;
         public Course Course;
 
         public Guid ID { get; }
-        public Guid CourseID { get; set;}
+        public Guid CourseID { get; set; }
 
         public Guid StudentID { get; set; }
 
         public int Value { get; set; }
-        
+
 
         public Grade()
         {

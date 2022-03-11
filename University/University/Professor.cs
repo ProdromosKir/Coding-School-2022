@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_03
+namespace University
 {
-    internal class Professor : Person
+    public class Professor : Person
     {
 
         public string Rank { get; set; }
 
-        public Course[] Courses ;
+        public Course[] Courses;
 
         public Student Student;
 
@@ -31,12 +31,12 @@ namespace Session_03
             return "Dr." + Name;
         }
 
-        public void Teach(Course course,DateTime date)
+        public void Teach(Course course, DateTime date)
         {
 
         }
 
-        public void SetGrade(Guid studentID,Guid courseID,int grade )
+        public void SetGrade(Guid studentID, Guid courseID, int grade)
         {
 
         }

@@ -4,24 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_03
+namespace University
 {
-    internal class Institute
+    public class Person
     {
-        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public string Name;
+
         public Guid ID { get; }
-        
-
-        public int YearsInService { get; set; }
 
 
-
-
-
-        public Institute()
+        public Person()
         {
-            ID = Guid.NewGuid();    
+            ID = Guid.NewGuid();
         }
+
 
         public string GetName()
         {
@@ -33,5 +31,6 @@ namespace Session_03
         {
             return Name = aName;
         }
+
     }
 }

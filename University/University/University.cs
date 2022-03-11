@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_03
+namespace University
 {
-    internal class University : Institute
+    public class University : Institute
     {
-        public Student[] Students { get;}
+        public List<Student> Students { get; }
         public Course[] Courses { get; }
 
         public Grade[] Grades { get; }
@@ -22,7 +22,7 @@ namespace Session_03
 
         public University()
         {
-            Students = new Student[30];
+            Students = new List<Student>();
             Courses = new Course[20];
             ScheduledCourses = new Schedule[60];
             Professors = new Professor[5];
@@ -30,7 +30,7 @@ namespace Session_03
         }
 
 
-        public Student[] GetStudents()
+        public List<Student> GetStudents()
         {
             return Students;
         }
@@ -46,7 +46,7 @@ namespace Session_03
         }
 
 
-        public void SetSchedule(Guid courseID,Guid proffesorID,DateTime date)
+        public void SetSchedule(Guid courseID, Guid proffesorID, DateTime date)
         {
 
         }

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_03
+namespace University
 {
-    internal class Institute
+    public class Institute
     {
         public string Name { get; set; }
         public Guid ID { get; }
-        
+
 
         public int YearsInService { get; set; }
 
@@ -20,7 +20,7 @@ namespace Session_03
 
         public Institute()
         {
-            ID = Guid.NewGuid();    
+            ID = Guid.NewGuid();
         }
 
         public string GetName()

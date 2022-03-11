@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_03
+namespace University
 {
-    internal class Schedule
+    public class Schedule
     {
         public Guid ID { get; }
         public string CourseID;
@@ -21,9 +21,9 @@ namespace Session_03
         }
 
 
-       
 
-        
+
+
 
     }
 }

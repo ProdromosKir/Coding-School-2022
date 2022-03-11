@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session-06", "Session-06\Session-06.csproj", "{AF4DFB92-CEB5-481F-B43C-61F7B6752707}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc", "Calc\Calc.csproj", "{6111B4A1-B061-452F-A844-ABB34DBB3C06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AF4DFB92-CEB5-481F-B43C-61F7B6752707}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF4DFB92-CEB5-481F-B43C-61F7B6752707}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF4DFB92-CEB5-481F-B43C-61F7B6752707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6111B4A1-B061-452F-A844-ABB34DBB3C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6111B4A1-B061-452F-A844-ABB34DBB3C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6111B4A1-B061-452F-A844-ABB34DBB3C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6111B4A1-B061-452F-A844-ABB34DBB3C06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

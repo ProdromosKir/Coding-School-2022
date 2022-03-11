@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_03
+namespace University
 {
-    internal class Course
+    public class Course
     {
-        //public Student[] students = new Student[30];
+
         public string Code { get; set; }
 
         public string Subject { get; set; }
@@ -16,10 +16,7 @@ namespace Session_03
         public Guid ID { get; }
         public Course()
         {
-          ID = Guid.NewGuid();  
+            ID = Guid.NewGuid();
         }
-
-      
-
     }
 }

@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_03
+namespace University
 {
-    internal class Student :Person
+    public class Student : Person
     {
 
         public int RegistrationNumber { get; set; }
         public Course[] Courses;
-        
+
 
         public Student()
         {
 
-           
+
         }
 
-        public void Attend(Course course,DateTime date)
+        public void Attend(Course course, DateTime date)
         {
 
         }
@@ -27,6 +27,11 @@ namespace Session_03
         public void WriteExam(Course course, DateTime date)
         {
 
+        }
+
+        public Student ShallowCopy()
+        {
+            return (Student)MemberwiseClone();
         }
     }
 }
