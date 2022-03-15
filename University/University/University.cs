@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace University
 {
+    [Serializable]
     public class University : Institute
     {
-        public List<Student> Students { get; }
+        public List<Student> Students { get; set; }
         public Course[] Courses { get; }
 
         public Grade[] Grades { get; }

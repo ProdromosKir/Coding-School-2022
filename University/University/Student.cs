@@ -10,7 +10,7 @@ namespace University
     {
 
         public int RegistrationNumber { get; set; }
-        public Course[] Courses;
+        public List<Course> Courses { get; set; } = new List<Course>(); 
 
 
         public Student()

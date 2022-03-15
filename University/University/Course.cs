@@ -13,10 +13,10 @@ namespace University
 
         public string Subject { get; set; }
 
-        public Guid ID { get; }
+        public string ID { get; } = Guid.NewGuid().ToString();  
         public Course()
         {
-            ID = Guid.NewGuid();
+            
         }
     }
 }

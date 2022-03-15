@@ -20,8 +20,10 @@ namespace Session_07
 
     public partial class UniversityForm : DevExpress.XtraEditors.XtraForm
     {
-        University.University university = new University.University();
-        Student student = new Student();
+
+         private University.University _university = new University.University();
+
+       
 
         
 
@@ -55,14 +57,14 @@ namespace Session_07
         private void LoadData()
         {
             string s = File.ReadAllText(STUDENT_FILE_NAME);
-            student = (Student)JsonSerializer.Deserialize(s,typeof(Student));
+            _university = (University.University)JsonSerializer.Deserialize(s,typeof(University.University));
             
         }
 
 
         private void SaveData()
         {
-            string json = JsonSerializer.Serialize(student);
+            string json = JsonSerializer.Serialize(_university);
             File.WriteAllText(STUDENT_FILE_NAME, json);
             MessageBox.Show("File Saved!");
 
@@ -76,26 +78,14 @@ namespace Session_07
 
         private void editStudentClick(object sender, EventArgs e)
         {
-            //CreateForm();
-
+            
+            
             StudentForm studentForm = new StudentForm();
+           // studentForm.Students = _university.Students;
+            studentForm.ShowDialog();
+           
 
-            if (university.Students!=null && university.Students.Count>0)
-            {
-                
-                studentForm.Students = university.Students;
-                studentForm.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Students are not loaded", "Warning", MessageBoxButtons.OK);
-
-                studentForm.ShowDialog();
-                //university.Students.Add(student)
-
-               // BasicForm form = new BasicForm();
-               // form.ShowDialog();
-            }
+            
            
         }
 

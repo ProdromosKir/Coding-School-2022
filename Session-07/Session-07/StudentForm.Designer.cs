@@ -28,86 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.lstStudents = new System.Windows.Forms.ListBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.lblName = new DevExpress.XtraEditors.LabelControl();
-            this.lblAge = new DevExpress.XtraEditors.LabelControl();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtAge = new System.Windows.Forms.TextBox();
-            this.lstStudents = new System.Windows.Forms.ListBox();
+            this.ctrlName = new DevExpress.XtraEditors.TextEdit();
+            this.ctrlRegNumber = new DevExpress.XtraEditors.TextEdit();
+            this.ctrlAge = new DevExpress.XtraEditors.SpinEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.bsStudents = new System.Windows.Forms.BindingSource(this.components);
+            this.bsCourses = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlRegNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlAge.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCourses)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(405, 384);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(80, 46);
-            this.btnClose.TabIndex = 10;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(319, 384);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 46);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(233, 384);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(80, 46);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(147, 384);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(80, 46);
-            this.btnNew.TabIndex = 7;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // lblName
-            // 
-            this.lblName.Location = new System.Drawing.Point(250, 67);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(27, 13);
-            this.lblName.TabIndex = 12;
-            this.lblName.Text = "Name";
-            // 
-            // lblAge
-            // 
-            this.lblAge.Location = new System.Drawing.Point(250, 115);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(19, 13);
-            this.lblAge.TabIndex = 13;
-            this.lblAge.Text = "Age";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(333, 64);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 21);
-            this.txtName.TabIndex = 14;
-            // 
-            // txtAge
-            // 
-            this.txtAge.Location = new System.Drawing.Point(333, 115);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(100, 21);
-            this.txtAge.TabIndex = 15;
             // 
             // lstStudents
             // 
@@ -117,16 +57,111 @@
             this.lstStudents.Size = new System.Drawing.Size(190, 290);
             this.lstStudents.TabIndex = 16;
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(502, 402);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(80, 46);
+            this.btnClose.TabIndex = 20;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(416, 402);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(80, 46);
+            this.btnSave.TabIndex = 19;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(330, 402);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(80, 46);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(244, 402);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(80, 46);
+            this.btnNew.TabIndex = 17;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            // 
+            // ctrlName
+            // 
+            this.ctrlName.Location = new System.Drawing.Point(320, 64);
+            this.ctrlName.Name = "ctrlName";
+            this.ctrlName.Size = new System.Drawing.Size(100, 20);
+            this.ctrlName.TabIndex = 21;
+            // 
+            // ctrlRegNumber
+            // 
+            this.ctrlRegNumber.Location = new System.Drawing.Point(320, 163);
+            this.ctrlRegNumber.Name = "ctrlRegNumber";
+            this.ctrlRegNumber.Size = new System.Drawing.Size(100, 20);
+            this.ctrlRegNumber.TabIndex = 22;
+            // 
+            // ctrlAge
+            // 
+            this.ctrlAge.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ctrlAge.Location = new System.Drawing.Point(320, 112);
+            this.ctrlAge.Name = "ctrlAge";
+            this.ctrlAge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ctrlAge.Size = new System.Drawing.Size(100, 20);
+            this.ctrlAge.TabIndex = 23;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(233, 67);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(27, 13);
+            this.labelControl1.TabIndex = 24;
+            this.labelControl1.Text = "Name";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(233, 119);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(19, 13);
+            this.labelControl2.TabIndex = 25;
+            this.labelControl2.Text = "Age";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(233, 170);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(63, 13);
+            this.labelControl3.TabIndex = 26;
+            this.labelControl3.Text = "Reg. Number";
+            // 
+            // bsStudents
+            // 
+            this.bsStudents.DataSource = typeof(University.Student);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 457);
+            this.ClientSize = new System.Drawing.Size(615, 488);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.ctrlAge);
+            this.Controls.Add(this.ctrlRegNumber);
+            this.Controls.Add(this.ctrlName);
             this.Controls.Add(this.lstStudents);
-            this.Controls.Add(this.txtAge);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
@@ -134,21 +169,29 @@
             this.Name = "StudentForm";
             this.Text = "Student";
             this.Load += new System.EventHandler(this.StudentForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlRegNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctrlAge.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCourses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.ListBox lstStudents;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnNew;
-        private DevExpress.XtraEditors.LabelControl lblName;
-        private DevExpress.XtraEditors.LabelControl lblAge;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtAge;
-        private System.Windows.Forms.ListBox lstStudents;
+        private DevExpress.XtraEditors.TextEdit ctrlName;
+        private DevExpress.XtraEditors.TextEdit ctrlRegNumber;
+        private DevExpress.XtraEditors.SpinEdit ctrlAge;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.BindingSource bsStudents;
+        private System.Windows.Forms.BindingSource bsCourses;
     }
 }

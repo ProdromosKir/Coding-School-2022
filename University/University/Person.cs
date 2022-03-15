@@ -10,14 +10,14 @@ namespace University
     {
         public int Age { get; set; }
 
-        public string Name;
+        public string Name { get; set; }
 
-        public Guid ID { get; }
+        public string ID { get; set; } = Guid.NewGuid().ToString();
 
 
         public Person()
         {
-            ID = Guid.NewGuid();
+           
         }
 
 
