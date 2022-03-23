@@ -50,37 +50,20 @@ namespace Session_07
             _university = new University.University();
             _university.Students = new List<Student>();
 
-            var student = new Student()
-            {
-                Name = "Prodromos",
-                Age = 22,
-            };
+            bsStudents.DataSource = _university;
+            bsStudents.DataMember = "Students";
 
-            student.Courses.Add(new Course()
-            {Code = "01",Subject = "Mathematics"
-
-            });
-
-            student.Courses.Add(new Course()
-            {
-                Code = "02",
-                Subject = "Physics"
-
-            });
-
-            _university.Students.Add(student);
-            bsStudents.DataSource = student;
-
-            bsCourses.DataSource = bsStudents;
-            bsCourses.DataMember = "Courses";
+            
+            grdStudents.DataSource=bsStudents;
+           
 
 
 
 
+           
 
-
-            ctrlName.DataBindings.Add(new Binding("EditValue", bsStudents, "Name", true));
-            ctrlAge.DataBindings.Add(new Binding("EditValue", bsStudents, "Age", true));
+            //ctrlName.DataBindings.Add(new Binding("EditValue", bsStudents, "Name", true));
+           // ctrlAge.DataBindings.Add(new Binding("EditValue", bsStudents, "Age", true));
 
 
 
@@ -109,6 +92,11 @@ namespace Session_07
 
             string json = JsonSerializer.Serialize(_university);
             File.WriteAllText(STUDENT_FILE_NAME, json);
+        }
+
+        private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
 
