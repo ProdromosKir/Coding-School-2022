@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+</html>
+
+<head>
+
+    <style type="text/css">
+    .selected{
+        font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <label for="txtString">Reverse String from Console</label>
+                <input id = "txtString">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="txtPalindrome">Check a Palindrome String</label>
+                <input id="txtPalindrome">
+            </td>
+            
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <td>
+                <label for="txtCustomerName">Customer Name</label>
+                <input id="txtCustomerName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="txtCustomerSurname">Customer Surname</label>
+                <input id="txtCustomerSurname">
+            </td>
+        </tr>
+         <tr>
+            <td>
+                <label for="txtCustomerAge">Customer Age</label>
+                <input id="txtCustomerAge">
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <button onclick="AddCustomer()">Create a Customer</button>
+            </td>
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    
+
+  
+
+
+    function reverseString()
+    {
+
+        var str = document.getElementById("txtString").value;
+    
+        var res = str.split("").reverse().join("");
+       
+        return res;
+    }
+
+
+    function checkPalindrome(){
+
+        var str = document.getElementById("txtPalindrome").value;
+        console.log(str);
+        const len = str.lenght;
+
+        for(let i=0; i<len/2; i++)
+        {
+            if (str[i] !== str[len-1-i])
+            {
+                return "it is not a palindrome";
+            }
+        }
+        return "it is a palindrome";
+
+
+
+    }
+
+
+
+    class Customer{
+        constructor(name,surname,age){
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+           // this.gender = gender;
+        }
+    }
+
+    function AddCustomer(){
+        var name = document.getElementById("txtCustomerName").value;
+        var surname = document.getElementById("txtCustomerSurname").value;
+        var age = document.getElementById("txtCustomerAge").value;
+
+        const customer = new Customer(name,surname,age);
+
+        var customers = [];
+        customers.push(customer);
+
+        
+       // PrintCustomers();
+
+
+    }
+
+    function PrintCustomers()
+    {
+        for (var i = 0; i < customers .length; i ++ ){
+            window.console.log(customers[i]);
+        }
+    }
+    
+
+</script>
+   
+
+
+</body>
+
+
+
+
+</html>
